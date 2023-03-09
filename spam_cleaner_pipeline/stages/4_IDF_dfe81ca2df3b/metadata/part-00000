@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.IDFModel","timestamp":1678389425807,"sparkVersion":"3.0.0","uid":"IDF_dfe81ca2df3b","paramMap":{"inputCol":"count_vec_stop","outputCol":"tf_idf"},"defaultParamMap":{"minDocFreq":0,"outputCol":"IDF_dfe81ca2df3b__output"}}

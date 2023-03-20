@@ -6,7 +6,7 @@ SpamShield is an Email/SMS spam classifier built using PySpark's Machine Learnin
 ## Demo
 A demo of this application is here - [SpamShield](https://ajosegun-spamshield.streamlit.app/)
 
-![Spam Shield Image](./SpamShield.png)
+![Spam Shield Image](./SpamShield2.png)
 
 
 ## Features

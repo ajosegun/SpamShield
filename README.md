@@ -4,7 +4,7 @@
 SpamShield is an Email/SMS spam classifier built using PySpark's Machine Learning library. It predicts whether a given message is spam or not. The model is built using Naive Bayes algorithm and preprocessed using a custom PySpark Pipeline.
 
 ## Demo
-A demo of this application is available on Streamlit - [SpamShield](https://ajosegun-spamshield.streamlit.app/)
+A demo of this application is here - [SpamShield](https://ajosegun-spamshield.streamlit.app/)
 
 ![Spam Shield Image](./SpamShield.png)
 

@@ -1,28 +1,32 @@
-# DevPay - Deployed on Streamlit
+# SpamShield - with PySpark's Machine Learning library and deployed on Streamlit
 
-DevPay is a machine learning web application that provides insights into software developer salaries based on the Stack Overflow Annual Developer Survey 2022. It utilizes the power of Python and the simplicity of Streamlit to provide a user-friendly interface for users to interact with the data.
+SpamShield is an Email/SMS spam classifier built using PySpark's Machine Learning library. It predicts whether a given message is spam or not. The model is built using Naive Bayes algorithm and preprocessed using a custom PySpark Pipeline.
 
 ## Demo
-A demo of this application is available on Streamlit - [DevPay](https://ajosegun-devpay.streamlit.app/)
+A demo of this application is available on Streamlit - [SpamShield](https://ajosegun-spamshield.streamlit.app/)
 
-![DevPay Image](./DevPayHome.png)
+![Spam Shield Image](./SpamShield.png)
 
 
 ## Features
-Average salary calculation based on various factors such as years of experience, job title, country, and programming language.
+1. Prediction: The application can predict whether a given message is spam or not.
 
-Visualization of the data using interactive plots that can be filtered based on the above factors.
+2. Custom PySpark Pipeline: The message is preprocessed using a custom PySpark Pipeline to ensure that it is correctly formatted and cleaned before it is fed into the model for prediction.
 
-Machine learning models to predict salary based on the user-specified factors.
+3. Naive Bayes Algorithm: The model is built using Naive Bayes algorithm, which is a simple yet effective algorithm for text classification.
+
+4. User Interface: The application has a simple and user-friendly interface that allows users to enter a message and get a prediction with just a click of a button.
+
+5. Easy to Use: The application can be easily installed and used on any machine that has Python and the required packages installed.
+
+6. Efficient: The PySpark library allows the application to handle large amounts of data efficiently, making it suitable for businesses and individuals who receive a high volume of messages.
 
 ## Requirements
 Python 3.6 or higher
-Streamlit
-Pandas
-Numpy
-Matplotlib
-Seaborn
-Sklearn
+findspark
+pyspark
+streamlit
+numpy
 
 ## Installation
 To install the required packages, run the following command:
@@ -37,8 +41,11 @@ streamlit run app.py
 
 This will start the application and launch a local server at http://localhost:8501/ in your web browser.
 
+## Model
+The model is built using Naive Bayes algorithm and preprocessed using a custom PySpark Pipeline. The trained model and the pipeline are saved as separate files and loaded into the application at runtime.
+
 ## Conclusion
-DevPay is an easy-to-use machine learning web application that provides valuable insights into software developer salaries. With its user-friendly interface and powerful machine learning models, it is a valuable tool for anyone interested in exploring the data from the Stack Overflow Annual Developer Survey 2022.
+The custom PySpark Pipeline ensures that the message is preprocessed correctly before it is fed into the model for prediction. This application can be useful for individuals and businesses to filter out spam messages from their inbox and focus on important messages.
 
 
 

@@ -7,7 +7,6 @@ import pyspark.sql.functions as F
 
 spark = SparkSession.builder.appName('SMSSpamCollection').getOrCreate()
 
-
 # load preprocessor
 from pyspark.ml import PipelineModel
 spam_cleaner_loaded = PipelineModel.load("spam_cleaner_pipeline")
@@ -17,6 +16,16 @@ from pyspark.ml.classification import NaiveBayesModel
 predictor_loaded = NaiveBayesModel.load("spam_classifier_model")
 
 def predict(text):
+    
+    '''
+    Input:
+
+    text: a string that contains the text to be predicted whether it is spam or not.
+    Output:
+    
+    prediction: an integer value that represents the predicted class label of the input text. 
+    0 indicates that the input text is not spam, while 1 indicates that it is spam.
+    '''
 
     # preprocess the text
     # text = "URGENT! You have won a 1 week FREE membership in our £100,000 Prize Jackpot! Txt the word: CLAIM to No: 81010"
@@ -32,6 +41,11 @@ def predict(text):
     prediction = int(prediction.select("prediction").first()[0])
     return prediction ## 0 = Not Spam // 1 = Spam
 
+st.title('SpamShield')
+st.subheader('''SpamShield is an Email/SMS spam classifier built using PySpark's Machine Learning library. 
+                It predicts whether a given message is spam or not. The model is built using Naive Bayes 
+                algorithm and preprocessed using a custom PySpark Pipeline. 
+            ''')
 
 text = st.text_area("Enter the message")
 if st.button("Predict"):

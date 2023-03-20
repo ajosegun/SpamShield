@@ -2,3 +2,5 @@ findspark
 pyspark
 streamlit
 numpy
+fastapi
+uvicorn
